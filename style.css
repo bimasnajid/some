@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-page {
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/2023/bg-wedding.jpg);
+  background-size: center;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+  font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+}
+
+.section hero-main h4 {
+  font-size: 1.6rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero a {
+  color: var(--pink);
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+.mynavbar {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "sacramento", cursive;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* couple start */
+/* Style untuk membuat video responsif */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Perbandingan aspek video 16:9 */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* couple end */
+/* Galerry START */
+.gallery-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7eb9;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-button:active {
+  transform: scale(0.95);
+}
+/* animasi daat gambar di click */
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: semibold;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #deb887;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+}
+
+.blue {
+  background-color: #d2b48c;
+  padding-top: 30%;
+  color: white;
+}
+
+.scroll-btn {
+  font-family: sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  -webkut-appearance: none;
+  appearance: none;
+  background: #db2777;
+  border: 0;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 8px 2px 29px rgb(255, 0, 130, 0.5);
+  transition: transfrom ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.scroll-btn:hover {
+  background-color: #facc15;
+}
+
+.content img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  max-width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: white;
+  color: var(defaultBackground);
+}
+
+/* Style for the gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-item {
+  margin: 10px;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Tombol Button Music */
+.audio-player {
+  text-align: center;
+}
+
+.audio-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff7eb9;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.audio-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.audio-button:active {
+  transform: scale(0.95);
+}
+/* Music END */
+
+/* Media query untuk layar tablet */
+@media screen and (max-width: 758px) {
+  /* Atur tata letak atau gaya untuk layar tablet di sini */
+  html {
+    font-size: 62.5%;
+    display: flex;
+    right: auto;
+    text-align: center;
+    justify-content: center;
+  }
+}
+/* Media laptop */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Media query untuk layar henphon */
+@media screen and (max-width: 767px) {
+  /* Atur tata letak atau gaya untuk layar henphon di sini */
+  body {
+    font-size: 14px;
+  }
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+}
+
+/* Contoh penggunaan unit responsif untuk font */
+h1 {
+  font-size: 2.5rem; /* Misalnya untuk desktop */
+}
+
+/* untuk layar henphon */
